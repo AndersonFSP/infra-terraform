@@ -11,14 +11,12 @@ terraform {
 
 provider "aws" {
   profile = "default"
-  region  = "us-east-1"
-  access_key = "AKIA5A5SO34NKZS3AW4U"
-  secret_key = "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"
+  region  = "us-west-2"
 }
 
 
 resource "aws_instance" "app_server" {
-  ami = "ami-09e67e426f25ce0d7"
+  ami = "ami-0892d3c7ee96c0bf7"
   instance_type = "t2.micro"
   key_name = "iac_alura"
   tags = {
